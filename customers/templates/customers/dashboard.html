@@ -1,0 +1,12 @@
+{%  extends 'customers/main.html' %}
+
+{% block content%}
+<h1>THIS IS THE DASHBOARD</h1>
+
+{% for customer in customers %}
+<h2>{{ customer.email}}</h2>
+<h2>{{ customer.name}}</h2>
+
+{% endfor %}
+
+{% endblock %}
