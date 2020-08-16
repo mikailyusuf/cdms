@@ -1,0 +1,15 @@
+{% extends 'customers/main.html'%}
+{% block content%}
+{% include 'customers/navbar.html' %}
+<form method="post" action="">
+
+    {% csrf_token%}
+
+    {{form}}
+
+
+    <input type="submit" name="REGISTER">
+
+</form>
+
+{% endblock %}

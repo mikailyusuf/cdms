@@ -2,12 +2,24 @@
 
 {% block content%}
 {% include 'customers/navbar.html'%}
-<h1>THIS IS THE DASHBOARD</h1>
 
-{% for customer in customers %}
-<h2>{{ customer.email}}</h2>
-<h2>{{ customer.name}}</h2>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
 
-{% endfor %}
+    <p class="card-text">Add Customer</p>
+
+    <a href="{% url 'addCustomer'%}" class="card-link">Add Customer</a>
+  </div>
+</div>
+
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+
+    <p class="card-text">View Customers</p>
+
+    <a href="{% url 'customers' %}" class="card-link">View Customers</a>
+  </div>
+</div>
 
 {% endblock %}
