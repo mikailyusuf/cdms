@@ -1,0 +1,30 @@
+{%  extends 'customers/main.html' %}
+
+{% block content%}
+{% include 'customers/navbar.html'%}
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">NAME</th>
+      <th scope="col">EMAIL</th>
+      <th scope="col">PHONE NUMBER</th>
+      <th scope="col">STATE</th>
+      <th scope="col">LOCAL GOVERNMENT AREA</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for customer in customers %}
+    <tr>
+      <td>{{ customer.name}}</td>
+      <td>{{ customer.email}}</td>
+      <td>{{ customer.phone_number}}</td>
+      <td>{{ customer.state}}</td>
+      <td>{{ customer.lga}}</td>
+    </tr>
+
+{% endfor %}
+      </tbody>
+</table>
+{% endblock %}
